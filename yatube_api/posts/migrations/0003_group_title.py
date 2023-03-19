@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('posts', '0002_auto_20230319_1522'),
+        ("posts", "0002_auto_20230319_1522"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='group',
-            name='title',
-            field=models.CharField(default='123', max_length=64),
+            model_name="group",
+            name="title",
+            field=models.CharField(default="123", max_length=64),
         ),
     ]

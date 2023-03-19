@@ -4,6 +4,8 @@
 # kritohanzo
 # eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
 
+# kritohanzo_test
+# eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzM2MTUzLCJqdGkiOiIxNzIwZTc0NGE3NDQ0MzhmYTcyNDNhNTI5YjYyZWNiOCIsInVzZXJfaWQiOjN9.Km5UqQGLpE9FgTJGSz9KjO2R60r4i7CCWQ9ChvSsiFM
 GET http://127.0.0.1:8000/api/v1/posts/
 
 
@@ -107,7 +109,7 @@ Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
 
 {
-    "following": "ne_kritohanzo"
+    "following": "kritohanzo"
 }
 
 
@@ -135,7 +137,7 @@ POST http://127.0.0.1:8000/api/v1/users/
 Content-Type: application/json
 
 {
-    "username": "ne_kritohanzo",
+    "username": "kritohanzo_test",
     "password": "superparol"
 }
 
@@ -145,7 +147,7 @@ POST http://127.0.0.1:8000/api/v1/jwt/create/
 Content-Type: application/json
 
 {
-    "username": "ne_kritohanzo",
+    "username": "kritohanzo_test",
     "password": "superparol"
 }
 
