@@ -1,0 +1,168 @@
+# ne_kritohanzo
+# eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA4NDkxLCJqdGkiOiIwNjgwZGI0MjlhZjg0MmM5OTgwMGM5MjJlMmRmNGNmYyIsInVzZXJfaWQiOjJ9.SGySB2J7waVK0zMBEOrvmX4iSFT6hARhKzNpQHhCy-E
+
+# kritohanzo
+# eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+
+GET http://127.0.0.1:8000/api/v1/posts/
+
+
+###
+
+POST http://127.0.0.1:8000/api/v1/posts/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA4NDkxLCJqdGkiOiIwNjgwZGI0MjlhZjg0MmM5OTgwMGM5MjJlMmRmNGNmYyIsInVzZXJfaWQiOjJ9.SGySB2J7waVK0zMBEOrvmX4iSFT6hARhKzNpQHhCy-E
+
+{
+    "text": "testoviy postik"
+}
+
+###
+
+GET http://127.0.0.1:8000/api/v1/posts/2/
+
+###
+
+PUT http://127.0.0.1:8000/api/v1/posts/2/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+
+
+{
+    "group": 1
+}
+
+###
+
+PATCH http://127.0.0.1:8000/api/v1/posts/2/
+Content-Type:  application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+
+{
+    "group": 1
+}
+
+###
+
+DELETE http://127.0.0.1:8000/api/v1/posts/1/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+
+###
+
+GET http://127.0.0.1:8000/api/v1/posts/2/comments/
+
+###
+
+POST http://127.0.0.1:8000/api/v1/posts/2/comments/
+Content-Type:  application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA4NDkxLCJqdGkiOiIwNjgwZGI0MjlhZjg0MmM5OTgwMGM5MjJlMmRmNGNmYyIsInVzZXJfaWQiOjJ9.SGySB2J7waVK0zMBEOrvmX4iSFT6hARhKzNpQHhCy-E
+
+{
+    "text": "i am not kritohanzo"
+}
+
+###
+
+GET http://127.0.0.1:8000/api/v1/posts/2/comments/3/
+
+###
+
+PUT http://127.0.0.1:8000/api/v1/posts/2/comments/6/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+
+{
+    "text": "hello man123"
+}
+
+###
+
+PATCH http://127.0.0.1:8000/api/v1/posts/2/comments/3/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+
+{
+    "text": "hello, i am changed text"
+}
+
+###
+
+DELETE http://127.0.0.1:8000/api/v1/posts/2/comments/6/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+
+###
+
+GET http://127.0.0.1:8000/api/v1/groups/3/
+
+###
+
+GET http://127.0.0.1:8000/api/v1/follow/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+
+###
+
+POST http://127.0.0.1:8000/api/v1/follow/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+
+{
+    "following": "ne_kritohanzo"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+
+POST http://127.0.0.1:8000/api/v1/users/
+Content-Type: application/json
+
+{
+    "username": "ne_kritohanzo",
+    "password": "superparol"
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "ne_kritohanzo",
+    "password": "superparol"
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/jwt/refresh/
+Content-Type: application/json
+
+{
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3OTMwNjk2NSwianRpIjoiNWRhZTVkNTc1ZmM3NDBhOWE1OGYyZjkwZTRhNzg5YzAiLCJ1c2VyX2lkIjoxfQ.25pdz5p5G56UpLdVI2WjNdm94TeewWsR9hR_VWBG9oo"
+}
+
+###
+
+POST http://127.0.0.1:8000/api/v1/jwt/verify/
+Content-Type: application/json
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MTAxLCJqdGkiOiJkOWVmOTYxOTQ0ZjU0MWE1YTg3OGUzZjQ1Nzk5NzYwZSIsInVzZXJfaWQiOjF9.eHBmho7ikmf7n5XP5_iuPi1WVcdCcOrm3_z9Pb2cB5M"
+}
