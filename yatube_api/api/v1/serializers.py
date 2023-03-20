@@ -2,6 +2,7 @@ from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
 
 from django.contrib.auth.models import User
+from django.shortcuts import get_object_or_404
 
 from posts.models import Comment, Follow, Group, Post
 
@@ -33,33 +34,21 @@ class GroupSerializer(serializers.ModelSerializer):
 
 
 class FollowSerializer(serializers.ModelSerializer):
-    following = serializers.CharField(source="following.username")
     user = serializers.CharField(source="user.username", read_only=True)
+    following = serializers.CharField()
 
     class Meta:
         fields = ("user", "following")
         model = Follow
         read_only_fields = ("user",)
 
-    def create(self, validated_data):
-        following_username = validated_data.pop("following").get("username")
-        if following_username == validated_data.get("user").username:
+    def validate_following(self, value):
+        user = self.context.get("request").user
+        value = get_object_or_404(User, username=value)
+        if user == value:
+            raise serializers.ValidationError("Unable to subscribe to myself")
+        if Follow.objects.filter(user=user, following=value).exists():
             raise serializers.ValidationError(
-                {"following": "Unable to subscribe to myself"}
+                "Following to this user already exist"
             )
-        if Follow.objects.filter(
-            user=validated_data.get("user"),
-            following__username=following_username,
-        ).exists():
-            raise serializers.ValidationError(
-                {"following": "Following to this user already exist"}
-            )
-        try:
-            following_user = User.objects.get(username=following_username)
-        except User.DoesNotExist:
-            raise serializers.ValidationError(
-                {"following": "User with this username does not exist"}
-            )
-        validated_data["following"] = following_user
-        validated_data["user"] = self.context["request"].user
-        return super().create(validated_data)
+        return value

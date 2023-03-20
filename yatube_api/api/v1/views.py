@@ -1,12 +1,11 @@
 from rest_framework import filters, mixins, permissions, viewsets
 from rest_framework.pagination import LimitOffsetPagination
 
-from django.http import Http404
 from django.shortcuts import get_object_or_404
 
 from posts.models import Comment, Follow, Group, Post
 
-from .permissions import IsAuthorOrReadOnly
+from ..permissions import IsAuthorOrReadOnly
 from .serializers import (
     CommentSerializer,
     FollowSerializer,
@@ -22,7 +21,7 @@ class ListRetrieveGroupViewSet(
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
+    queryset = Post.objects.select_related("author").all()
     serializer_class = PostSerializer
     pagination_class = LimitOffsetPagination
     permission_classes = (
@@ -43,11 +42,8 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         post_id = self.kwargs.get("post_id")
-        try:
-            post = Post.objects.get(id=post_id)
-            return Comment.objects.filter(post=post)
-        except Post.DoesNotExist:
-            raise Http404
+        post = get_object_or_404(Post, id=post_id)
+        return Comment.objects.select_related("author").filter(post=post)
 
     def perform_create(self, serializer):
         post_id = self.kwargs.get("post_id")

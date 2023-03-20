@@ -91,16 +91,16 @@ GET http://127.0.0.1:8000/api/v1/groups/3/
 ###
 
 GET http://127.0.0.1:8000/api/v1/follow/
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5NDI2NTI0LCJqdGkiOiIwNDU2NDYzMGQ0YmY0NDFiYjFkYjAyYWUzZDI1ZWUzNCIsInVzZXJfaWQiOjF9.aZESGhiyltlr6Fn5rSEqgkBhMxlJyhC7LqEXVwXsAjs
 
 ###
 
 POST http://127.0.0.1:8000/api/v1/follow/
 Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MzA3MjQxLCJqdGkiOiJjYzg4MDM3NmNkZDE0ZjBlYTlhMDczNWIyMmNiZDQyZCIsInVzZXJfaWQiOjF9.9oWSZlwMmkkCbNINPLTy27pq-7shSVCLT9j3vaxU46I
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5NDI2NTI0LCJqdGkiOiIwNDU2NDYzMGQ0YmY0NDFiYjFkYjAyYWUzZDI1ZWUzNCIsInVzZXJfaWQiOjF9.aZESGhiyltlr6Fn5rSEqgkBhMxlJyhC7LqEXVwXsAjs
 
 {
-    "following": "kritohanzo"
+    "following": "kritohanzo4"
 }
 
 ###
@@ -109,7 +109,7 @@ POST http://127.0.0.1:8000/api/v1/users/
 Content-Type: application/json
 
 {
-    "username": "kritohanzo_test",
+    "username": "kritohanzo4",
     "password": "superparol"
 }
 
@@ -119,7 +119,7 @@ POST http://127.0.0.1:8000/api/v1/jwt/create/
 Content-Type: application/json
 
 {
-    "username": "kritohanzo_test",
+    "username": "kritohanzo2",
     "password": "superparol"
 }
 
